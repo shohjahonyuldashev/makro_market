@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "category": "Fresh Fruits",
+    "name": "Organic Strawberries",
+    "price": "$4.99",
+    "lottie": "../lottie/carrrots.json"
+  },
+  {
+    "id": 2,
+    "category": "Vegetables",
+    "name": "Fresh Organic Carrots",
+    "price": "$2.49",
+    "lottie": "../lottie/ass.json"
+  },
+  {
+    "id": 3,
+    "category": "Dairy",
+    "name": "Whole Milk",
+    "price": "$3.99",
+    "lottie": "../lottie/drink.json"
+  },
+  {
+    "id": 4,
+    "category": "Drinks",
+    "name": "Organic Coffee Beans",
+    "price": "$7.99",
+    "lottie": "../lottie/coffee.json"
+  },
+  {
+    "id": 5,
+    "category": "Cakes",
+    "name": "Cakes",
+    "price": "$9.99",
+    "lottie": "../lottie/cake.json"
+  },
+  {
+    "id": 6,
+    "category": "Desserts",
+    "name": "Ponchic",
+    "price": "$3.99",
+    "lottie": "../lottie/Donut.json"
+  },
+  {
+    "id": 7,
+    "category": "Dairy",
+    "name": "Ice cream",
+    "price": "$5.00",
+    "lottie": "../lottie/icecream.json"
+  },
+  {
+    "id": 8,
+    "category": "Candy",
+    "name": "Chocolate",
+    "price": "$7.99",
+    "lottie": "../lottie/Chocolate.json"
+  },
+  {
+    "id": 9,
+    "category": "Candy",
+    "name": "Candy Bar",
+    "price": "$9.99",
+    "lottie": "../lottie/Candy.json"
+  },
+  {
+    "id": 10,
+    "category": "Candy",
+    "name": "Chocolate",
+    "price": "$7.99",
+    "lottie": "../lottie/Chocolate.json"
+  }
+]

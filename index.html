@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shohjahon</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Makro</h1>
+          <input
+            class="input"
+            type="search"
+            placeholder="Search for fresh produce, electronics, essentials..."
+          />
+          <div class="account">
+            <i class="fa-regular fa-user"></i>
+            <p>account</p>
+          </div>
+          <div class="lof">
+            <i class="fa-regular fa-heart b"></i>
+            <i class="fa-solid fa-cart-arrow-down g"></i>
+          </div>
+        </div>
+        <div class="depart">
+          <ul>
+            <li>
+              <a href="#"> All departments </a>
+              <a href="#">Fresh Produce</a>
+              <a href="#">Bakery</a>
+              <a href="#">Meat & Seafood</a>
+              <a href="#">Beverages</a>
+              <a href="#">Household</a>
+              <a href="#">Special Offers</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="section">
+          <div class="newa">
+            <p>Weeknd specials</p>
+          </div>
+          <h1>
+            Freshness Delivered to <br />
+            Your Doorstep
+          </h1>
+          <p class="hyx">
+            Get the best quality organic fruits, vegetables, and daily
+            essentials delivered within 2 hours. Fresh, fast, and reliable.
+          </p>
+          <button>Shop Now <i class="fa-solid fa-basket-shopping"></i></button>
+        </div>
+        <div class="inm" data-aos="fade-left">
+          <img src="./img/vegetable.png" alt="vegetable">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="sect">
+        <div class="yumi">
+          <i class="fa-solid fa-truck"></i>
+          <div class="text">
+            <h3>
+              Free shipping
+            </h1>
+            <p>
+              On all orders over $50
+            </p>
+          </div>
+        </div>
+        <div class="yumi">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div class="text">
+            <h3>Quality Guarantee</h3>
+            <p>100% money back </p>
+          </div>
+        </div>
+        <div class="yumi">
+          <i class="fa-solid fa-clock"></i>
+          <div class="text">
+            <h3>24/7 Support</h3>
+            <p>We're here to help</p>
+          </div>
+        </div>
+        <div class="yumi">
+          <i class="fa-solid fa-folder-closed"></i>
+          <div class="text">
+            <h3>Secure Payment</h3>
+            <p>100% secure payment </p>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <h1>Shop by Category</h1>
+        <div class="cards_cate">
+          <div class="card">
+            <i class="fa-solid fa-apple-whole"></i>
+            <h3>
+              Fruits
+            </h3>
+          </div>
+          <div class="card">
+           <i class="fa-solid fa-carrot"></i>
+            <h3>
+              Vegetables
+            </h3>
+          </div>
+          <div class="card">
+          <i class="fa-solid fa-cake-candles"></i>
+            <h3>
+              Bakery
+            </h3>
+          </div>
+          <div class="card">
+           <i class="fa-solid fa-bacon"></i>
+            <h3>
+              Meat
+            </h3>
+          </div>
+          <div class="card">
+          <i class="fa-solid fa-bottle-water"></i>
+            <h3>
+              Dairy
+            </h3>
+          </div>
+          <div class="card">
+           <i class="fa-solid fa-soap"></i>
+            <h3>
+              Cleaning
+            </h3>
+          </div>
+        </div>
+      </div>
+      <section class="featured">
+        <h1>
+          Featured Products
+        </h1>
+        <div id="featured-products" class="product">
+
+        </div>
+      </section>
+    </main>
+  </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+      AOS.init({
+        duration: 1000, // Скорость анимации (в миллисекундах)
+        once: true      // Анимация сработает только один раз при скролле
+      });
+    </script>
+  <script src="./app/app.js"></script>
+</html>

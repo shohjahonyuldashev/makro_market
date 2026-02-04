@@ -1,0 +1,450 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 1990px;
+  height: auto;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+}
+
+nav .logo {
+  display: flex;
+  height: 135px;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: 84px;
+  margin-top: 14px;
+}
+
+.logo h1 {
+  color: #008832;
+  font-size: 51px;
+  cursor: pointer;
+}
+
+nav .input {
+  width: 680px;
+  height: 45px;
+  margin-left: 40px;
+  background-color: #2a2c2c;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 28px;
+  font-size: 20px;
+}
+
+.account {
+  display: flex;
+  color: white;
+  margin-left: 70px;
+  align-items: center;
+  gap: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.lof {
+  display: flex;
+  margin-left: 44px;
+  gap: 44px;
+  color: white;
+  font-size: 25px;
+}
+
+.b {
+  cursor: pointer;
+}
+
+.g {
+  cursor: pointer;
+}
+
+.depart {
+  display: flex;
+  height: 135px;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: 190px;
+}
+
+ul li {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+li a:focus {
+  color: #018331;
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  height: 701px;
+  background-color: #18211b;
+}
+
+.section {
+  width: 790px;
+  height: 545px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 91px;
+  margin-left: 94px;
+}
+
+.section .newa {
+  width: 159px;
+  height: 40px;
+  background-color: #183d29;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section .newa p {
+  color: white;
+  font-weight: 700;
+}
+
+.section h1 {
+  font-size: 69px;
+  color: #78c38a;
+  margin-top: 47px;
+}
+
+.section .hyx {
+  font-size: 26px;
+  color: #9097a6;
+  margin-top: 7px;
+}
+
+.section button {
+  width: 191px;
+  height: 65px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #2fa84f;
+  font-size: 23px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  scale: 0.9;
+  transition: 0.4s;
+}
+
+/* Добавь это в существующие блоки или в конец файла */
+
+/* Плавное появление контента при загрузке страницы */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Эффект для навигационных ссылок */
+li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #2fa84f;
+  transition: width 0.3s ease;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+/* Красивое свечение и подъем кнопки */
+.section button {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(47, 168, 79, 0.2);
+}
+
+.section button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(47, 168, 79, 0.4);
+  background-color: #35c05c;
+}
+
+.main {
+  width: 100%;
+  height: 701px;
+  background: radial-gradient(circle at top right, #1d2e24, #121212);
+  /* Это создаст мягкое зеленоватое свечение в углу */
+}
+
+main .sect {
+  width: 100%;
+  height: 86px;
+  display: flex;
+  padding-top: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 196px;
+  background-color: #121212;
+  border-bottom: 1px solid rgb(82, 79, 79);
+}
+
+main .yumi {
+  width: 236px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  line-height: 5px;
+}
+
+.inm {
+  width: 624px;
+  height: 400px;
+  position: relative;
+}
+
+.inm img {
+  position: absolute;
+  bottom: 500px;
+  left: 999px;
+  /* animation: slideInImage 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; */
+}
+
+@keyframes slideInImage {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9); /* Начало: правее и меньше */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* Конец: на месте и в полный размер */
+  }
+}
+
+main .yumi i {
+  font-size: 29px;
+  color: #35c05c;
+}
+
+main .yumi .text h3 {
+  color: white;
+}
+
+main .yumi .text p {
+  color: #9097a6;
+}
+
+main .category {
+  width: 100%;
+  height: auto;
+  background-color: #121212;
+}
+
+main .category h1 {
+  margin: 0; /* Убирает лишние полосы сверху и снизу */
+  padding-top: 60px; /* Если нужен отступ внутри, используй padding вместо margin */
+  padding-left: 124px;
+  color: white;
+  margin-left: 124px;
+  color: white;
+}
+
+main .category .cards_cate {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 94px;
+  padding-bottom: 30px;
+}
+
+main .category .cards_cate .card {
+  width: 252px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12;
+  border-radius: 12px;
+  border: 1px solid rgb(164, 156, 156);
+}
+
+main .category .cards_cate .card {
+  /* Твои существующие стили */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+main .category .cards_cate .card:hover {
+  background-color: #1a1a1a;
+  border-color: #35c05c;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+main .category .cards_cate .card:hover i {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+main .category .cards_cate .card i {
+  font-size: 42px;
+  color: #1dc85c;
+}
+
+main .category .cards_cate .card h3 {
+  color: white;
+}
+
+/* Контейнер для карточек */
+/* Основная секция товаров */
+/* Секция с заголовком */
+.featured {
+  padding: 80px 10%; /* Больше отступов по бокам для стиля */
+  background-color: #121212;
+}
+
+.featured h1 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 32px;
+  text-align: left; /* Заголовок обычно слева */
+}
+
+/* Основной контейнер-сетка (ИСПРАВЛЕНО) */
+#featured-products {
+  display: grid;
+  /* repeat(4...) заставит карточки стоять по 4 в ряд на больших экранах */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Карточка товара (ИСПРАВЛЕНО) */
+.card {
+  background: #1c1c1c;
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid #2a2a2a;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #27ae60;
+  box-shadow: 0 10px 300px rgba(42, 211, 112, 0.1);
+}
+
+/* Плеер Lottie */
+.card lottie-player {
+  width: 100% !important;
+  height: 180px !important;
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* Текстовая область */
+.card .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Растягивает текст, чтобы кнопка ушла вниз */
+}
+
+.card .text span {
+  color: #666;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .text h3 {
+  color: white;
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card .text p {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: auto; /* Прижимает цену к низу */
+  margin-bottom: 0;
+}
+
+/* Кнопка плюс (ИСПРАВЛЕНО) */
+.add-btn {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: #232323;
+  color: #27ae60;
+  border: 1px solid #333;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #27ae60;
+  color: white;
+  border-color: #27ae60;
+}
