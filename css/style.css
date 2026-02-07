@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0 auto;
   max-width: 1990px;
   height: auto;
@@ -16,89 +18,105 @@ header {
 
 nav {
   width: 100%;
-  height: 210px;
+  height: 95px;
   display: flex;
-  flex-direction: column;
-  background-color: #121212;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(10, 10, 10, 0.7); /* Эффект стекла */
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-nav .logo {
+/* Стилизация логотипа */
+.logo {
   display: flex;
-  height: 135px;
   align-items: center;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-left: 84px;
-  margin-top: 14px;
+  gap: 10px;
 }
 
 .logo h1 {
-  color: #008832;
-  font-size: 51px;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
   cursor: pointer;
 }
 
-nav .input {
-  width: 680px;
-  height: 45px;
-  margin-left: 40px;
-  background-color: #2a2c2c;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  padding-left: 28px;
-  font-size: 20px;
+/* Зеленая точка/акцент для премиальности */
+.logo h1::after {
+  content: ".";
+  color: #10b981; /* Изумрудный */
 }
 
-.account {
-  display: flex;
-  color: white;
-  margin-left: 70px;
-  align-items: center;
-  gap: 6px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.lof {
-  display: flex;
-  margin-left: 44px;
-  gap: 44px;
-  color: white;
-  font-size: 25px;
-}
-
-.b {
-  cursor: pointer;
-}
-
-.g {
-  cursor: pointer;
-}
-
-.depart {
-  display: flex;
-  height: 135px;
-  align-items: center;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-left: 190px;
-}
-
-ul li {
-  display: flex;
-  gap: 80px;
+/* Центральное меню */
+.depart ul {
+  width: 99%;
   list-style: none;
 }
 
-li a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
+.depart ul li {
+  display: flex;
+  gap: 35px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 30px;
+  border-radius: 50px; /* Капсульная форма */
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-li a:focus {
-  color: #018331;
+.depart a {
+  text-decoration: none;
+  color: #888;
+  font-size: 19px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.depart a:hover {
+  color: #10b981;
+  transform: translateY(-1px);
+}
+
+/* Активная ссылка */
+.depart a.active {
+  color: #ffffff;
+}
+
+/* Блок иконок справа */
+.lof {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lof i {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+/* Стильная обводка для корзины */
+.lof .g {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.lof i:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lof .g:hover {
+  background: #10b981;
+  color: #fff;
 }
 
 /* Main */
@@ -308,7 +326,7 @@ main .category .cards_cate {
 }
 
 main .category .cards_cate .card {
-  width: 252px;
+  width: 222px;
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -365,7 +383,7 @@ main .category .cards_cate .card h3 {
 #featured-products {
   display: grid;
   /* repeat(4...) заставит карточки стоять по 4 в ряд на больших экранах */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 20px;
 }
 
@@ -447,4 +465,212 @@ main .category .cards_cate .card h3 {
   background: #27ae60;
   color: white;
   border-color: #27ae60;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 122, 212, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(223, 93, 12, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 8, 197, 0);
+  }
+}
+
+.advans {
+  animation: slideRight 0.8s ease-out forwards;
+}
+
+.im img {
+  width: 100%;
+  height: auto;
+  /* Анимация плавания: бесконечная, 3 секунды, плавная */
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+}
+
+.blu .advans button:hover {
+  animation: pulse 1.5s infinite;
+  transform: scale(1.05);
+  background-color: #35c05c;
+}
+
+/* Остальные стили из твоего кода */
+.blur {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  font-family: sans-serif;
+}
+
+.blur .blu {
+  width: 1390px;
+  max-width: 1400px;
+  height: 290px;
+  background-color: #3eb0ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0 60px;
+  overflow: hidden;
+}
+
+.blur .blu .advans h1 {
+  font-size: 45px;
+  margin: 0;
+  color: #121212;
+}
+
+.blu .advans p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.blu .advans button {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #008832;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.im {
+  width: 300px;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 5% 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h4 {
+  color: #3eb0ff; /* Цвет акцента как на баннере */
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+/* Стили для формы подписки */
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.subscribe-form button {
+  background-color: #008832;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #00a33c;
+}
+
+/* Нижняя полоса */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: #3eb0ff;
 }

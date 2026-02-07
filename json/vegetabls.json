@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Fresh Broccoli",
+    "price": 2.45,
+    "discount": 10,
+    "weight": "500g",
+    "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500",
+    "stock": true
+  },
+  {
+    "id": 2,
+    "name": "Red Bell Pepper",
+    "price": 3.2,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/redbull.png",
+    "stock": true
+  },
+  {
+    "id": 3,
+    "name": "Organic Carrots",
+    "price": 1.15,
+    "discount": 15,
+    "weight": "800g",
+    "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500",
+    "stock": true
+  },
+  {
+    "id": 4,
+    "name": "Purple Eggplant",
+    "price": 4.1,
+    "discount": 0,
+    "weight": "2pcs",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?w=500",
+    "stock": false
+  },
+  {
+    "id": 5,
+    "name": "Peppsi",
+    "price": 1.0,
+    "discount": 5,
+    "weight": "1.5L",
+    "image": "../imgs/pepssi.jpg",
+    "stock": true
+  },
+  {
+    "id": 6,
+    "name": "Coca-Cola",
+    "price": 1.0,
+    "discount": 0,
+    "weight": "1.5L",
+    "image": "../imgs/cocacola.jpg",
+    "stock": true
+  },
+  {
+    "id": 7,
+    "name": "Fanta",
+    "price": 1.0,
+    "discount": 0,
+    "weight": "1.5L",
+    "image": "../imgs/fanta.png",
+    "stock": true
+  },
+  {
+    "id": 8,
+    "name": "Sprite",
+    "price": 1.2,
+    "discount": 0,
+    "weight": "1.5L",
+    "image": "../imgs/sprite.jpeg",
+    "stock": true
+  },
+  {
+    "id": 9,
+    "name": "Snikers",
+    "price": 5.00,
+    "discount": 0,
+    "weight": "500g",
+    "image": "../imgs/snikers.png",
+    "stock": true
+  },
+  {
+    "id": 10,
+    "name": "Apple",
+    "price": 1.3,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/apple.jpg",
+    "stock": true
+  },
+  {
+    "id": 11,
+    "name": "Banana",
+    "price": 3.0,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/bananna.png",
+    "stock": true
+  },
+  {
+    "id": 12,
+    "name": "Ice Cream",
+    "price": 10.0,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/icecream.jpg",
+    "stock": true
+  }
+]

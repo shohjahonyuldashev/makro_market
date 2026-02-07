@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  max-width: 1990px;
+  height: auto;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(10, 10, 10, 0.7); /* Эффект стекла */
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.logo h1::after {
+  content: ".";
+  color: #10b981;
+}
+
+.depart ul {
+  width: 99%;
+  list-style: none;
+}
+
+.depart ul li {
+  display: flex;
+  gap: 35px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 30px;
+  border-radius: 50px; /* Капсульная форма */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.depart a {
+  text-decoration: none;
+  color: #888;
+  font-size: 19px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.depart a:hover {
+  color: #10b981;
+  transform: translateY(-1px);
+}
+
+.depart a.active {
+  color: #ffffff;
+}
+
+.lof {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lof i {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.lof .g {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.lof i:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lof .g:hover {
+  background: #10b981;
+  color: #fff;
+}
+
+.catalog-header {
+  padding: 140px 60px 40px;
+  background: linear-gradient(to bottom, #18211b, #121212);
+}
+
+.catalog-header h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.catalog-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.results-count {
+  color: #9097a6;
+  font-size: 16px;
+}
+
+.results-count span {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.filter-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 22px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #888;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+.filter-btn:focus {
+  border-color: #10b981;
+  color: white;
+}
+
+.filter-btn.active {
+  color: white;
+  /* border-color: #10b981; */
+  /* background: rgba(16, 185, 129, 0.1);  */
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Сетка товаров */
+.all-products-grid-section {
+  padding: 20px 60px 80px;
+  background-color: #121212;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.veg-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 15px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.veg-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff96; /* Твой зеленый акцент */
+}
+
+.veg-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.veg-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.veg-card .price {
+  color: #00ff96;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.add-btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #00ff96;
+  color: #000;
+}

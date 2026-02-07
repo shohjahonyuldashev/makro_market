@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shohjahon</title>
+    <link rel="stylesheet" href="./css/prosytyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Makro</h1>
+        </div>
+        <div class="depart">
+          <ul>
+            <li>
+              <a href="./index.html" class="active">Home</a>
+              <a href="./pructs.html">All Products</a>
+              <a href="#">Bakery</a>
+              <a href="#">Meat & Seafood</a>
+              <a href="#">Beverages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lof">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart b" title="Избранное"></i>
+          <i class="fa-solid fa-user" title="Профиль"></i>
+        </div>
+      </nav>
+      <section class="catalog-header" data-aos="fade-down">
+        <div class="container">
+          <h1>All Products</h1>
+          <div class="catalog-controls">
+            <p class="results-count">
+              Items found: <span id="veg-count">0</span>
+            </p>
+
+            <div class="filter-group">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="Fruits">Fruits</button>
+              <button class="filter-btn" data-category="Vegetables">
+                Vegetables
+              </button>
+              <button class="filter-btn" data-category="Bakery">Bakery</button>
+              <button class="filter-btn" data-category="Meat">Meat</button>
+              <button class="filter-btn" data-category="Dairy">Dairy</button>
+              <button class="filter-btn" data-category="Cleaning">
+                Cleaning
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="all-products-grid-section">
+        <div id="vegetables-grid" class="products-grid"></div>
+      </section>
+    </header>
+  </body>
+  <script src="./app/app.js"></script>
+</html>

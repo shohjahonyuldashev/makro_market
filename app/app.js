@@ -1,31 +1,5 @@
 // app/app.js
 
-const shopBtn = document.querySelector(".section button");
-const cartIcon = document.querySelector(".g"); // Твоя иконка корзины
-
-// Анимация иконки корзины при наведении на кнопку "Shop Now"
-shopBtn.addEventListener("mouseenter", () => {
-  cartIcon.style.transform = "scale(1.3) rotate(-10deg)";
-  cartIcon.style.transition = "0.3s";
-  cartIcon.style.color = "#2fa84f";
-});
-
-shopBtn.addEventListener("mouseleave", () => {
-  cartIcon.style.transform = "scale(1) rotate(0)";
-  cartIcon.style.color = "white";
-});
-
-// Эффект печатающегося текста для поиска
-const searchInput = document.querySelector(".input");
-searchInput.addEventListener("focus", () => {
-  searchInput.style.width = "720px"; // Немного расширяем при фокусе
-  searchInput.style.transition = "0.4s ease";
-});
-
-searchInput.addEventListener("blur", () => {
-  searchInput.style.width = "680px";
-});
-
 // Функция для появления категорий по очереди
 function animateCategories() {
   const cards = document.querySelectorAll(".cards_cate .card");
@@ -89,3 +63,32 @@ async function loadProducts() {
 }
 
 loadProducts();
+
+const Vebgrid = document.getElementById("vegetables-grid");
+const vegCount = document.getElementById("veg-count");
+
+async function fetchVegetables() {
+  try{
+    const response = await fetch("./json/vegetabls.json");
+    const vegetables = await response.json();
+    Vebgrid.innerHTML = "";
+   if(vegCount) vegCount.textContent = vegetables.length;
+
+  //  Создаем карточки для каждого овоща
+  Vebgrid.innerHTML= vegetables.map(veg=>`<div class="veg-card">
+                <img src="${veg.image}" alt="${veg.name}">
+                <div class="card-info">
+                    <h3>${veg.name}</h3>
+                    <p style="color: #666; font-size: 0.8rem;">${veg.weight}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                        <span class="price">$${veg.price.toFixed(2)}</span>
+                        <button class="add-btn">Add +</button>
+                    </div>
+                </div>
+            </div>`).join("");
+  }catch(error){
+    console.error("Ошибка при загрузке овощей:", error);
+  }
+}
+
+fetchVegetables();
