@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Fresh Broccoli",
+    "category": "Vegetables",
     "price": 2.45,
     "discount": 10,
     "weight": "500g",
@@ -11,6 +12,7 @@
   {
     "id": 2,
     "name": "Red Bell Pepper",
+    "category": "Vegetables",
     "price": 3.2,
     "discount": 0,
     "weight": "1kg",
@@ -20,6 +22,7 @@
   {
     "id": 3,
     "name": "Organic Carrots",
+    "category": "Vegetables",
     "price": 1.15,
     "discount": 15,
     "weight": "800g",
@@ -29,6 +32,7 @@
   {
     "id": 4,
     "name": "Purple Eggplant",
+    "category": "Vegetables",
     "price": 4.1,
     "discount": 0,
     "weight": "2pcs",
@@ -37,7 +41,8 @@
   },
   {
     "id": 5,
-    "name": "Peppsi",
+    "name": "Pepsi",
+    "category": "Beverages",
     "price": 1.0,
     "discount": 5,
     "weight": "1.5L",
@@ -47,6 +52,7 @@
   {
     "id": 6,
     "name": "Coca-Cola",
+    "category": "Beverages",
     "price": 1.0,
     "discount": 0,
     "weight": "1.5L",
@@ -56,6 +62,7 @@
   {
     "id": 7,
     "name": "Fanta",
+    "category": "Beverages",
     "price": 1.0,
     "discount": 0,
     "weight": "1.5L",
@@ -65,6 +72,7 @@
   {
     "id": 8,
     "name": "Sprite",
+    "category": "Beverages",
     "price": 1.2,
     "discount": 0,
     "weight": "1.5L",
@@ -73,8 +81,9 @@
   },
   {
     "id": 9,
-    "name": "Snikers",
-    "price": 5.00,
+    "name": "Snickers",
+    "category": "Dairy",
+    "price": 5.0,
     "discount": 0,
     "weight": "500g",
     "image": "../imgs/snikers.png",
@@ -82,7 +91,8 @@
   },
   {
     "id": 10,
-    "name": "Apple",
+    "name": "Apple Red",
+    "category": "Fruits",
     "price": 1.3,
     "discount": 0,
     "weight": "1kg",
@@ -91,7 +101,8 @@
   },
   {
     "id": 11,
-    "name": "Banana",
+    "name": "Banana Premium",
+    "category": "Fruits",
     "price": 3.0,
     "discount": 0,
     "weight": "1kg",
@@ -100,11 +111,192 @@
   },
   {
     "id": 12,
-    "name": "Ice Cream",
+    "name": "Ice Cream Vanilla",
+    "category": "Dairy",
     "price": 10.0,
     "discount": 0,
     "weight": "1kg",
     "image": "../imgs/icecream.jpg",
+    "stock": true
+  },
+  {
+    "id": 13,
+    "name": "Fresh Potato",
+    "category": "Vegetables",
+    "price": 0.8,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/potato.jpg",
+    "stock": true
+  },
+  {
+    "id": 14,
+    "name": "Yellow Onions",
+    "category": "Vegetables",
+    "price": 0.6,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/onion.png",
+    "stock": true
+  },
+  {
+    "id": 15,
+    "name": "Cabbage",
+    "category": "Vegetables",
+    "price": 1.1,
+    "discount": 20,
+    "weight": "1.2kg",
+    "image": "../imgs/cappage.png",
+    "stock": true
+  },
+  {
+    "id": 16,
+    "name": "Cucumber",
+    "category": "Vegetables",
+    "price": 2.0,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "../imgs/cucumber.png",
+    "stock": true
+  },
+  {
+    "id": 17,
+    "name": "Tomatoes Cherry",
+    "category": "Vegetables",
+    "price": 3.5,
+    "discount": 10,
+    "weight": "250g",
+    "image": "../imgs/tomato.png",
+    "stock": true
+  },
+  {
+    "id": 18,
+    "name": "Milk 3.2%",
+    "category": "Dairy",
+    "price": 1.5,
+    "discount": 0,
+    "weight": "1L",
+    "image": "../imgs/milk.png",
+    "stock": true
+  },
+  {
+    "id": 19,
+    "name": "Eggs 10pcs",
+    "category": "Dairy",
+    "price": 2.1,
+    "discount": 0,
+    "weight": "600g",
+    "image": "../imgs/eggs.png",
+    "stock": true
+  },
+  {
+    "id": 20,
+    "name": "Cheddar Cheese",
+    "category": "Dairy",
+    "price": 6.8,
+    "discount": 5,
+    "weight": "300g",
+    "image": "../imgs/cheesee.png",
+    "stock": true
+  },
+  {
+    "id": 21,
+    "name": "Yogurt Natural",
+    "category": "Dairy",
+    "price": 0.9,
+    "discount": 0,
+    "weight": "150g",
+    "image": "../imgs/yogurt.png",
+    "stock": true
+  },
+  {
+    "id": 22,
+    "name": "Baguette French",
+    "category": "Bakery",
+    "price": 1.2,
+    "discount": 0,
+    "weight": "250g",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500",
+    "stock": true
+  },
+  {
+    "id": 23,
+    "name": "Butter 82%",
+    "category": "Dairy",
+    "price": 3.4,
+    "discount": 0,
+    "weight": "200g",
+    "image": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=500",
+    "stock": true
+  },
+  {
+    "id": 24,
+    "name": "Chicken Fillet",
+    "category": "Meat",
+    "price": 7.5,
+    "discount": 12,
+    "weight": "1kg",
+    "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=500",
+    "stock": true
+  },
+  {
+    "id": 25,
+    "name": "Pasta Fusilli",
+    "category": "Bakery",
+    "price": 1.8,
+    "discount": 0,
+    "weight": "500g",
+    "image": "../imgs/fussil.png",
+    "stock": true
+  },
+  {
+    "id": 26,
+    "name": "Rice Basmati",
+    "category": "Cleaning",
+    "price": 2.5,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500",
+    "stock": true
+  },
+  {
+    "id": 27,
+    "name": "Olive Oil Extra",
+    "category": "Cleaning",
+    "price": 9.0,
+    "discount": 15,
+    "weight": "500ml",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500",
+    "stock": true
+  },
+  {
+    "id": 28,
+    "name": "Ground Coffee",
+    "category": "Beverages",
+    "price": 8.2,
+    "discount": 0,
+    "weight": "250g",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500",
+    "stock": true
+  },
+  {
+    "id": 29,
+    "name": "Black Tea Bags",
+    "category": "Beverages",
+    "price": 3.0,
+    "discount": 0,
+    "weight": "50pcs",
+    "image": "../imgs/tea.png",
+    "stock": true
+  },
+  {
+    "id": 30,
+    "name": "Sugar White",
+    "category": "Bakery",
+    "price": 1.4,
+    "discount": 0,
+    "weight": "1kg",
+    "image": "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=500",
     "stock": true
   }
 ]
