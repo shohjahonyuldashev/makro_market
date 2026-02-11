@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makro - Hot Sales</title>
+    <link rel="stylesheet" href="./css/sales.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>Makro</h1>
+        </div>
+        <div class="depart">
+          <ul>
+            <li>
+              <a href="./index.html" class="active">Home</a>
+              <a href="./pructs.html">All Products</a>
+              <a href="./sales.html">Sales</a>
+              <a href="#">Meat & Seafood</a>
+              <a href="#">Beverages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lof">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <!-- <i  class="fa-regular fa-heart b" title="Избранное"></i> -->
+          <i class="fa-solid fa-user" title="Профиль"></i>
+        </div>
+      </nav>
+      <section class="sales-hero">
+        <h1>MEGA SALE</h1>
+        <p>Скидки до -50% только на этой неделе</p>
+      </section>
+
+      <div id="sales-products-grid" class="sales-grid"></div>
+
+      <section class="info-section">
+        <div class="info-header">
+          <span class="info-tag">Important</span>
+          <h2>Условия акции</h2>
+        </div>
+
+        <div class="info-grid-details">
+          <div class="info-item">
+            <i class="fa-solid fa-shop"></i>
+            <p>Акция действует во всех магазинах <strong>Makro</strong>.</p>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-box-open"></i>
+            <p>Количество товара ограничено. Успейте купить!</p>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-percent"></i>
+            <p>Скидки не суммируются с другими предложениями.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="product-modal" class="product-modal">...</div>
+  </body>
+  <script src="./app/sales.js"></script>
+</html>

@@ -5,6 +5,7 @@
     "category": "Vegetables",
     "price": 2.45,
     "discount": 10,
+    "oldPrice": 2.50,
     "weight": "500g",
     "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500",
     "stock": true
@@ -15,7 +16,8 @@
     "category": "Vegetables",
     "price": 3.2,
     "discount": 0,
-    "weight": "1kg",
+    "oldPrice": 2.50,
+    "weight": "1.5L",
     "image": "../imgs/redbull.png",
     "stock": true
   },
@@ -45,6 +47,7 @@
     "category": "Beverages",
     "price": 1.0,
     "discount": 5,
+    "oldPrice": 8.50,
     "weight": "1.5L",
     "image": "../imgs/pepssi.jpg",
     "stock": true
@@ -55,6 +58,7 @@
     "category": "Beverages",
     "price": 1.0,
     "discount": 0,
+    "oldPrice": 1.5,
     "weight": "1.5L",
     "image": "../imgs/cocacola.jpg",
     "stock": true

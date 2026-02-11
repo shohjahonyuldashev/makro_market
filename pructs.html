@@ -21,7 +21,7 @@
             <li>
               <a href="./index.html" class="active">Home</a>
               <a href="./pructs.html">All Products</a>
-              <a href="#">Bakery</a>
+              <a href="./sales.html">Sales</a>
               <a href="#">Meat & Seafood</a>
               <a href="#">Beverages</a>
             </li>
@@ -29,7 +29,7 @@
         </div>
         <div class="lof">
           <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-regular fa-heart b" title="Избранное"></i>
+          <!-- <i class="fa-regular fa-heart b" title="Избранное"></i> -->
           <i class="fa-solid fa-user" title="Профиль"></i>
         </div>
       </nav>
@@ -61,6 +61,18 @@
       <section class="all-products-grid-section">
         <div id="vegetables-grid" class="products-grid"></div>
       </section>
+      <div id="product-modal" class="product-modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <div id="modal-details"></div>
+          <div class="quantity-wrapper">
+            <button class="qty-btn minus">-</button>
+            <span id="modal-qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <button class="confirm-btn">Добавить в корзину</button>
+        </div>
+      </div>
     </header>
   </body>
   <script src="./app/app.js"></script>

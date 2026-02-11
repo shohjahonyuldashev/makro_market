@@ -116,7 +116,7 @@ nav {
 
 .catalog-header {
   padding: 140px 60px 40px;
-  
+
   background: linear-gradient(to bottom, #18211b, #121212);
 }
 
@@ -183,12 +183,6 @@ nav {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.products-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
   padding: 20px 0;
@@ -243,4 +237,163 @@ nav {
 .add-btn:hover {
   background: #00ff96;
   color: #000;
+}
+/* Размытый фон всей страницы */
+.product-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px) saturate(180%); /* Эффект дорогого стекла */
+}
+
+/* Контейнер окна */
+.modal-content {
+  position: relative;
+  margin: 4% auto;
+  padding: 40px;
+  width: 95%;
+  max-width: 720px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family:
+    "SF Pro Display",
+    -apple-system,
+    sans-serif;
+}
+
+#modal-details{
+  width: 800px;
+  /* background-color: #00ff96; */
+}
+/* Картинка с эффектом глубины */
+#modal-details img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#modal-details img:hover {
+  transform: scale(1.05);
+}
+
+/* Заголовки */
+#modal-details h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+#modal-details p {
+  color: #a1a1a6;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Цена как главный акцент */
+.modal-price {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(
+    to right,
+    #30d158,
+    #b0ffc6
+  ); /* Градиент на тексте */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+/* Блок выбора количества (Минимализм) */
+.quantity-wrapper {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 20px;
+  border-radius: 100px; /* Овальная форма */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 35px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.qty-btn:hover {
+  color: #30d158;
+}
+
+#modal-qty {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 20px;
+}
+
+/* Кнопка "Добавить" - Самая сочная деталь */
+.confirm-btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  background: #30d158;
+  color: #000; /* Темный текст на светлом фоне выглядит дороже */
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(48, 209, 88, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.confirm-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(48, 209, 88, 0.5);
+  background: #34e05f;
+}
+
+/* Кнопка закрытия */
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

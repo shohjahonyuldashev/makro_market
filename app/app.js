@@ -48,11 +48,10 @@ async function loadProducts() {
       const media = product.lottie
         ? `<lottie-player src="${product.lottie}" background="transparent" speed="1" style="width: 100%; height: 200px;" loop autoplay></lottie-player>`
         : `<img src="${product.image}" alt="${product.name}" style="width: 100%; height: 200px; object-fit: contain;">`;
-      card.innerHTML = `${media} <div class="text">
+      card.innerHTML = `${media} <div class="text data-id="${product.id}">
                     <span>${product.category}</span>
                     <h3>${product.name}</h3>
                     <p>${product.price}</p>
-                    <button class="add-btn">+</button>
                 </div>`;
       container.appendChild(card);
     });
@@ -66,6 +65,10 @@ loadProducts();
 
 const Vebgrid = document.getElementById("vegetables-grid");
 const vegCount = document.getElementById("veg-count");
+const modal = document.getElementById("product-modal");
+const details = document.getElementById("modal-details");
+const current = document.getElementById("modal-qty");
+let currentProduct = null;
 const API = "../json/vegetabls.json";
 let allproducts = [];
 
@@ -116,8 +119,6 @@ async function fetchVegetables() {
 
     allproducts = vegetables;
 
-    renderCards(allproducts);
-
     if (vegCount) vegCount.textContent = vegetables.length;
 
     if (!response.ok) {
@@ -142,12 +143,12 @@ function renderCards(data) {
   Vebgrid.innerHTML = data
     .map(
       (veg) => `
-        <div class="veg-card">
+        <div class="veg-card clickable-card" data-id="${veg.id}">
             <img src="${veg.image}" alt="${veg.name}">
             <div class="card-info">
                 <h3>${veg.name}</h3>
-                <p style="color: #666; font-size: 0.8rem;">${veg.weight}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <p>${veg.weight}</p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span class="price">$${veg.price.toFixed(2)}</span>
                     <button class="add-btn">Add +</button>
                 </div>
@@ -155,6 +156,10 @@ function renderCards(data) {
         </div>`,
     )
     .join("");
+
+  document.querySelectorAll(".clickable-card").forEach((card) => {
+    card.addEventListener("click", () => openModal(card.dataset.id));
+  });
 }
 
 document.querySelectorAll(".filter-btn").forEach((btn) => {
@@ -176,3 +181,42 @@ document.querySelectorAll(".filter-btn").forEach((btn) => {
 });
 
 fetchVegetables();
+
+function openModal(id) {
+  const products = allproducts.find((p) => p.id == id);
+  if (!products) return;
+
+  currentProduct = 1;
+  details.innerHTML = `
+        <img src="${products.image}" style="width: 100%; max-width: 600px; border-radius:; margin-bottom: 15px;">
+        <h2>${products.name}</h2>
+        <p style="color: #888;">${products.weight}</p>
+        <p style="font-size: 1.5rem; color: #2ecc71;">$${products.price.toFixed(2)}</p>
+    `;
+
+  modal.style.display = "block";
+}
+
+document.querySelector(".plus").onclick = () => {
+  currentProduct++;
+  current.textContent = currentProduct;
+};
+
+document.querySelector(".minus").onclick = () => {
+  if (currentProduct > 1) {
+    currentProduct--;
+    current.textContent = currentProduct;
+  }
+};
+
+document.querySelector(".close-button").onclick = () =>
+  (modal.style.display = "none");
+window.onclick = (event) => {
+  if (event.target == modal) modal.style.display = "none";
+};
+
+const heart = document.getElementById("heart");
+
+heart.addEventListener("click", () => {
+  heart.classList.toggle("liked");
+});

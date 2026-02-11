@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  max-width: 1990px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #18211b, #121212);
+
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(10, 10, 10, 0.7); /* Эффект стекла */
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Стилизация логотипа */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+/* Зеленая точка/акцент для премиальности */
+.logo h1::after {
+  content: ".";
+  color: #10b981; /* Изумрудный */
+}
+
+/* Центральное меню */
+.depart ul {
+  width: 99%;
+  list-style: none;
+}
+
+.depart ul li {
+  display: flex;
+  gap: 35px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 30px;
+  border-radius: 50px; /* Капсульная форма */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.depart a {
+  text-decoration: none;
+  color: #888;
+  font-size: 19px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.depart a:hover {
+  color: #10b981;
+  transform: translateY(-1px);
+}
+
+/* Активная ссылка */
+.depart a.active {
+  color: #ffffff;
+}
+
+/* Блок иконок справа */
+.lof {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lof i {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+/* Стильная обводка для корзины */
+.lof .g {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.lof i:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lof .g:hover {
+  background: #10b981;
+  color: #fff;
+}
+
+.sales-hero {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(45deg, #ff3b30, #ff9500);
+  border-radius: 40px;
+  margin: 20px 0;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.sales-hero h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.sales-hero p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.sales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+/* Информационный блок */
+/* 1. Главный баннер */
+.sales-grid {
+  display: grid;
+  /* Жестко 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 0;
+  width: 100%;
+}
+
+/* Карточка (чтобы была высокой и ровной) */
+.veg-card.on-sale {
+  background: #1a1a1c;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Все карточки одной высоты */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.veg-card.on-sale img {
+  width: 100%;
+  height: 350px; /* Оптимальная высота для 3-х колонок */
+  object-fit: cover;
+}
+/* Контент внутри */
+.card-info {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-info h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: snow;
+}
+
+/* Блок цен */
+.price-block {
+  margin-bottom: 25px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #847c7c;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.current-price {
+  color: #30d158;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+/* СОЧНАЯ КНОПКА */
+.add-btn {
+  background: #30d158;
+  color: #000;
+  border: none;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(48, 209, 88, 0.2);
+}
+
+.add-btn:hover {
+  background: #34e05f;
+  box-shadow: 0 0 25px rgba(48, 209, 88, 0.5);
+  transform: scale(1.03);
+}
+.info-section {
+  background: #111113;
+  padding: 60px 40px;
+  border-radius: 40px;
+  margin: 80px auto;
+  max-width: 1200px;
+  border: 1px solid rgba(48, 209, 88, 0.2); /* Тонкая зеленая рамка */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.info-tag {
+  background: rgba(48, 209, 88, 0.1);
+  color: #30d158;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.info-header h2 {
+  font-size: 42px;
+  margin-top: 15px;
+  font-weight: 900;
+  color: white;
+}
+
+/* Сетка для условий */
+.info-grid-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.info-item:hover {
+  background: rgba(48, 209, 88, 0.05);
+  transform: scale(1.02);
+}
+
+.info-item i {
+  font-size: 30px;
+  color: #30d158; /* Цвет иконки */
+}
+
+.info-item p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.info-item strong {
+  color: #fff;
+}
+
+.discount_badge {
+  color: white;
+  text-align: center;
+  padding: 2px;
+  font-size: 28px;
+}
+
